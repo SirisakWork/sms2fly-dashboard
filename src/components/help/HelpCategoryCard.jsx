@@ -1,6 +1,7 @@
 import React from 'react';
 import { FileText, ChevronRight, ArrowRight } from 'lucide-react';
 
+// eslint-disable-next-line no-unused-vars
 const HelpCategoryCard = ({ title, icon: Icon, iconBgColorHex, iconColor = "#1570ef", items }) => {
     return (
         <div className="help-category-card">

@@ -106,7 +106,7 @@ const SenderRow = ({ sender, index, isLast, onEdit, onDelete }) => {
     );
 };
 
-const SendersTable = ({ onEdit, onDelete, onAdd }) => {
+const SendersTable = ({ onEdit, onDelete }) => {
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {

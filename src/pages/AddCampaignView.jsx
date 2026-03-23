@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useToast } from '../context/ToastContext';
 import { ArrowLeft, Save, HelpCircle, ChevronDown, MoreVertical, UploadCloud, Eye, Send, CheckCircle2, MessageSquare } from 'lucide-react';
 import IPhoneMockup from '../components/brands/IPhoneMockup';
 import './AddBrandView.css';
 import './AddCampaignView.css';
 
-const AddCampaignView = ({ onBack, isEdit = false, initialData = null }) => {
+const AddCampaignView = ({ onBack, isEdit = false }) => {
     const { addToast } = useToast();
     // Card 1
     const [campaignName, setCampaignName] = useState('');

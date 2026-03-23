@@ -7,6 +7,10 @@ let toastIdCounter = 0;
 export const ToastProvider = ({ children }) => {
     const [toasts, setToasts] = useState([]);
 
+    const removeToast = useCallback((id) => {
+        setToasts(prev => prev.filter(t => t.id !== id));
+    }, []);
+
     const addToast = useCallback((type, title, message) => {
         const id = ++toastIdCounter;
         const newToast = { id, type, title, message };
@@ -17,11 +21,7 @@ export const ToastProvider = ({ children }) => {
         setTimeout(() => {
             removeToast(id);
         }, 4000);
-    }, []);
-
-    const removeToast = useCallback((id) => {
-        setToasts(prev => prev.filter(t => t.id !== id));
-    }, []);
+    }, [removeToast]);
 
     return (
         <ToastContext.Provider value={{ toasts, addToast, removeToast }}>
@@ -30,6 +30,7 @@ export const ToastProvider = ({ children }) => {
     );
 };
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const useToast = () => {
     const context = useContext(ToastContext);
     if (!context) {

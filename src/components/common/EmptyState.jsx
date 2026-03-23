@@ -3,6 +3,7 @@ import { FolderOpen } from 'lucide-react';
 import './EmptyState.css';
 
 const EmptyState = ({ 
+    // eslint-disable-next-line no-unused-vars
     icon: Icon = FolderOpen, 
     title = 'ไม่มีข้อมูลในขณะนี้', 
     description = 'ยังไม่มีข้อมูลในระบบ หรือคุณยังไม่ได้สร้างรายการใดๆ', 

@@ -15,8 +15,8 @@ const AddBrandView = ({ onBack, isEdit = false, initialData = null }) => {
 
     const [activeTheme, setActiveTheme] = useState(1);
 
-    const [maxUsers, setMaxUsers] = useState('100');
-    const [maxCampaigns, setMaxCampaigns] = useState('50');
+    const [maxUsers] = useState('100');
+    const [maxCampaigns] = useState('50');
     
     // Checkboxes
     const [allowCampaigns, setAllowCampaigns] = useState(true);
