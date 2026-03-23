@@ -1,0 +1,73 @@
+.skeleton-table {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    background: #fff;
+    overflow: hidden;
+}
+
+.skeleton-header {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--border);
+    background: var(--bg-hover);
+    padding: 12px 24px;
+    gap: 24px;
+}
+
+.skeleton-row {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--border);
+    padding: 16px 24px;
+    gap: 24px;
+}
+
+.skeleton-row:last-child {
+    border-bottom: none;
+}
+
+.skeleton-header-cell {
+    height: 16px;
+    background: var(--border);
+    border-radius: 4px;
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+}
+
+.skeleton-cell {
+    height: 20px;
+    background: var(--border);
+    border-radius: 4px;
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Shimmer Animation Effect */
+.skeleton-cell::after, .skeleton-header-cell::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: translateX(-100%);
+    background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0) 0,
+        rgba(255, 255, 255, 0.4) 20%,
+        rgba(255, 255, 255, 0.6) 60%,
+        rgba(255, 255, 255, 0)
+    );
+    animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+    100% {
+        transform: translateX(100%);
+    }
+}

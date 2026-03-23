@@ -1,0 +1,125 @@
+.iphone-mockup-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 20px 0;
+}
+
+.iphone-mockup-frame {
+  position: relative;
+  width: 320px;
+  height: 650px;
+  background-color: #fff;
+  border-radius: 44px;
+  box-shadow: 
+    0 0 0 10px #1a1a1a, /* Internal rim bezel */
+    0 0 0 12px #e5e5e5, /* Outer frame edge */
+    0 20px 40px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* Simulated Notch */
+.iphone-notch {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150px;
+  height: 25px;
+  background-color: #1a1a1a;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  z-index: 10;
+}
+
+.iphone-speaker {
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 4px;
+  background-color: #333;
+  border-radius: 4px;
+  z-index: 11;
+}
+
+.iphone-camera {
+  position: absolute;
+  top: 6px;
+  right: 80px;
+  width: 10px;
+  height: 10px;
+  background-color: #333;
+  border-radius: 50%;
+  z-index: 11;
+}
+
+/* Inner Screen */
+.iphone-screen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f8fafc;
+  overflow-y: auto;
+  /* Hide scrollbar for neatness */
+  scrollbar-width: none;
+}
+.iphone-screen::-webkit-scrollbar {
+  display: none;
+}
+
+/* Mockup inner content scaling depending on width */
+@media (max-width: 1200px) {
+  .iphone-mockup-frame {
+    transform: scale(0.9);
+    transform-origin: top center;
+}
+}
+
+/* ============================================================
+   Inner Screen Elements
+   ============================================================ */
+.mockup-ui-header {
+  width: 100%;
+  padding: 48px 16px 16px; /* 48px to clear the notch */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 600;
+  font-size: 16px;
+  border-bottom-left-radius: 24px;
+  border-bottom-right-radius: 24px;
+}
+
+.mockup-ui-body {
+  padding: 24px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.mockup-ui-bubble {
+  border-radius: 16px;
+  border-top-left-radius: 4px;
+  padding: 16px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.mockup-ui-btn {
+  width: 100%;
+  padding: 12px;
+  border-radius: 100px; /* pill shape */
+  color: #fff;
+  font-weight: 500;
+  text-align: center;
+  font-size: 14px;
+  cursor: default;
+}

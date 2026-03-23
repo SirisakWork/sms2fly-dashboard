@@ -1,0 +1,6 @@
+/* SendersView specific layout overrides */
+.senders-view-container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}

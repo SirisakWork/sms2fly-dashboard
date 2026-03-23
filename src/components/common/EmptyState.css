@@ -1,0 +1,60 @@
+.empty-state-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 64px 24px;
+    background: var(--bg-card);
+    border: 1px dashed var(--border);
+    border-radius: var(--radius-lg);
+    text-align: center;
+    width: 100%;
+    min-height: 300px;
+}
+
+.empty-state-icon {
+    width: 64px;
+    height: 64px;
+    background: #f1f5f9;
+    color: var(--text-secondary);
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+    position: relative;
+}
+
+/* Subtle outer ring */
+.empty-state-icon::before {
+    content: '';
+    position: absolute;
+    inset: -8px;
+    border-radius: var(--radius-full);
+    background: #f8fafc;
+    z-index: 0;
+}
+
+.empty-state-icon svg {
+    position: relative;
+    z-index: 1;
+}
+
+.empty-state-title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+}
+
+.empty-state-description {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    max-width: 400px;
+    margin-bottom: 24px;
+    line-height: 1.5;
+}
+
+.empty-state-action {
+    padding: 10px 20px;
+}

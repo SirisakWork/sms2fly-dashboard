@@ -1,0 +1,71 @@
+.radio-custom {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+    background: white;
+}
+.radio-custom.checked {
+    border-color: var(--primary, #1571ef);
+    background: var(--primary, #1571ef);
+}
+.radio-custom.checked .radio-inner {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+}
+
+/* Campaign Summary specifics */
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px 0;
+}
+
+.summary-label {
+    font-size: 14px;
+    color: var(--text-secondary);
+}
+
+.summary-value {
+    font-size: 14px;
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+.badge-outline {
+    display: inline-flex;
+    align-items: center;
+    padding: 2px 8px;
+    border-radius: 16px;
+    border: 1px solid var(--border);
+    font-size: 12px;
+    color: #344054;
+    background: white;
+}
+
+.badge-success {
+    display: inline-flex;
+    align-items: center;
+    padding: 2px 8px;
+    border-radius: 16px;
+    font-size: 12px;
+    color: #027A48;
+    background: #ECFDF3;
+    font-weight: 500;
+}
+
+.info-box-blue {
+    background-color: #EFF8FF;
+    border: 1px solid #B2DDFF;
+    border-radius: 8px;
+    padding: 16px;
+    display: flex;
+    gap: 12px;
+}

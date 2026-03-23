@@ -1,0 +1,49 @@
+.app-container {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-left: 280px;
+  /* Sidebar width */
+}
+
+.content-wrapper {
+  display: flex;
+  flex: 1;
+}
+
+.center-area {
+  flex: 1;
+  padding: 32px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+@media (min-width: 1536px) {
+  .center-area {
+    max-width: 1200px;
+  }
+}
+
+.sidebar-right-container {
+  width: 256px;
+  background: var(--bg-card);
+  border-left: 1px solid var(--border);
+  position: sticky;
+  top: 72px;
+  height: calc(100vh - 72px);
+  overflow-y: auto;
+}
+
+.card {
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-soft);
+  padding: 24px;
+}
